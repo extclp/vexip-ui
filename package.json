@@ -1,5 +1,5 @@
 {
-  "name": "vexip-ui",
+  "name": "@extclp/vexip-ui",
   "version": "2.3.24",
   "type": "module",
   "packageManager": "pnpm@9.15.4",
@@ -49,22 +49,16 @@
     "test:cover": "vitest run --coverage",
     "test:dev": "vitest dev"
   },
-  "main": "lib/index.cjs",
   "module": "es/index.mjs",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./es/index.mjs",
-      "require": "./lib/index.cjs"
+      "import": "./es/index.mjs"
     },
     "./es": {
       "types": "./dist/index.d.ts",
       "import": "./es/index.mjs"
-    },
-    "./lib": {
-      "types": "./dist/index.d.ts",
-      "require": "./lib/index.cjs"
     },
     "./es/*.mjs": {
       "types": "./dist/*.d.ts",
@@ -77,17 +71,6 @@
       ],
       "import": "./es/*.mjs"
     },
-    "./lib/*.cjs": {
-      "types": "./dist/*.d.ts",
-      "require": "./lib/*.cjs"
-    },
-    "./lib/*": {
-      "types": [
-        "./dist/*.d.ts",
-        "./dist/*/index.d.ts"
-      ],
-      "require": "./lib/*.cjs"
-    },
     "./package.json": "./package.json",
     "./*": "./*"
   },
@@ -97,9 +80,6 @@
     "es/components/*/style.mjs",
     "es/style/*",
     "es/css/*",
-    "lib/components/*/style.cjs",
-    "lib/style/*",
-    "lib/css/*",
     "style/**/*.scss",
     "theme/**/*.css"
   ],
@@ -107,7 +87,6 @@
     "css",
     "dist",
     "es",
-    "lib",
     "meta-data",
     "style",
     "themes",

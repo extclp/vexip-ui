@@ -31,13 +31,6 @@ export default defineConfig(async (): Promise<UserConfig> => {
         external,
         output: [
           {
-            format: 'cjs',
-            preserveModules: true,
-            preserveModulesRoot: resolve(__dirname, 'vue'),
-            dir: 'lib',
-            entryFileNames: '[name].js'
-          },
-          {
             format: 'es',
             preserveModules: true,
             preserveModulesRoot: resolve(__dirname, 'vue'),

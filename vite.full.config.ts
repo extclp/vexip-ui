@@ -51,9 +51,9 @@ export default defineConfig(async () => {
       sourcemap: true,
       lib: {
         entry: resolve(__dirname, 'full-lib.ts'),
-        formats: ['es', 'cjs', 'iife'],
+        formats: ['es', 'iife'],
         name: 'VexipUI',
-        fileName: format => `vexip-ui.${format === 'es' ? 'mjs' : format === 'cjs' ? 'cjs' : 'js'}`
+        fileName: format => `vexip-ui.${format === 'es' ? 'mjs' : 'js'}`
       },
       rollupOptions: {
         external: ['vue'],

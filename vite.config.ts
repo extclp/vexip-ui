@@ -66,13 +66,6 @@ export default defineConfig(async (): Promise<UserConfig> => {
         external,
         output: [
           {
-            format: 'cjs',
-            preserveModules: true,
-            preserveModulesRoot: __dirname,
-            dir: 'lib',
-            entryFileNames: '[name].cjs'
-          },
-          {
             format: 'es',
             preserveModules: true,
             preserveModulesRoot: __dirname,
