@@ -17,4 +17,4 @@ cache
 common/icons/vue
 common/icons/types
 
-dev-server/play.vue
+dev-server/play*.vue
